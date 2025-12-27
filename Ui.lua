@@ -10113,4 +10113,4 @@ local Library do
 end 
 
 getgenv().Library = Library
-return Library
+return Library,Options,MiscOptions
