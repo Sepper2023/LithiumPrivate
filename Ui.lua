@@ -10112,5 +10112,4 @@ local Library do
     end
 end 
 
-getgenv().Library = Library
 return Library,Options,MiscOptions
