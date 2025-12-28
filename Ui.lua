@@ -5380,14 +5380,10 @@ local Library do
                 local InputBegan 
                 InputBegan = UserInputService.InputBegan:Connect(function(Input)
                     if Input.UserInputType == Enum.UserInputType.Keyboard then 
-					    Keybind:Set(Input.KeyCode)
-					elseif Input.UserInputType == Enum.UserInputType.MouseButton1 
-					    or Input.UserInputType == Enum.UserInputType.MouseButton2 
-					    or Input.UserInputType == Enum.UserInputType.MouseButton3 then
-					    Keybind:Set(Input.KeyCode) -- Use KeyCode for mouse buttons too
-					else
-					    Keybind:Set(Input.UserInputType)
-					end
+                        Keybind:Set(Input.KeyCode)
+                    else
+                        Keybind:Set(Input.UserInputType)
+                    end
 
                     InputBegan:Disconnect()
                     InputBegan = nil
